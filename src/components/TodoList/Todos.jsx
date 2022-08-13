@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   container: {
     border: "1px solid #ccc",
-    backgroundColor: "#eee",
+    backgroundColor: "rgba(240,240,240, .5)",
     padding: 16,
     [theme.breakpoints.down("sm")]: {
       padding: "0 8px",
@@ -24,12 +24,7 @@ const Todos = (props) => {
 
   return (
     <div className={classes.container} elevation={2}>
-      <MuiTypography
-        typography={title}
-        fontWeight={600}
-        color="#333"
-        component="h2"
-      />
+      <MuiTypography typography={title} fontWeight={600} color="#333" component="h2" />
       <ul>
         {todos.map((todo) => (
           <Todo key={todo.id} todo={todo} />
